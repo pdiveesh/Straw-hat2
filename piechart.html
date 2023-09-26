@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>pie chart</title>
+    <link rel="stylesheet" href="style3.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'minerals in soil'],
+          ['nitrogen',  40],
+          ['phosphorous',15 ],
+          ['sulphur',  7],
+          ['Magnesium', 4],
+          ['potassium', 11],
+          ['iron',23]
+        ]);
+
+        var options = {
+          title: 'minerals in soil'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+  <footer>
+    <a href="./index.html"><button>HOME</button></a>
+  </footer>
+</html>
