@@ -8,9 +8,11 @@
     <style>
 
 body {
+    padding-top: 150px;
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     height: 100vh;
     margin: 0;
@@ -30,6 +32,7 @@ body {
     height: 40px;
     animation: spin 1s linear infinite;
     margin: 0 auto;
+    
 }
 
 @keyframes spin {
@@ -40,9 +43,11 @@ body {
 p {
     margin-top: 10px;
 }
-#stop{
+button{
+height: 80px;
+width: 200px;
+margin-bottom: 150px;
 
-position: absolute;
 
 }
     </style>
@@ -52,8 +57,9 @@ position: absolute;
         <div class="loader"></div>
         <p>Analyzing Data...</p>
     </div>
+    <a id="stop" href="./piechart.html"><button>Result</button></a>
     <script src="script.js"></script>
 </body>
 
-<a id="stop" href="./piechart.html"><button>Result</button></a>
+
 </html>
